@@ -117,19 +117,19 @@ if __name__ == '__main__':
     plt.figure(figsize=(15, 6))
 
     plt.subplot(1, 2, 1)
-    plt.plot(epochs, loss, 'b-', label='Eğitim Kaybı')
-    plt.plot(epochs, val_loss, 'r-', label='Doğrulama Kaybı')
-    plt.title('Eğitim ve Doğrulama Kaybı')
+    plt.plot(epochs, loss, 'b-', label='Training Loss')
+    plt.plot(epochs, val_loss, 'r-', label='Validation Loss')
+    plt.title('Training and Validation Loss')
     plt.xlabel('Epochs')
-    plt.ylabel('Kayıp')
+    plt.ylabel('Loss')
     plt.legend()
 
     plt.subplot(1, 2, 2)
-    plt.plot(epochs, accuracy, 'b-', label='Eğitim Doğruluğu')
-    plt.plot(epochs, val_accuracy, 'r-', label='Doğrulama Doğruluğu')
-    plt.title('Eğitim ve Doğrulama Doğruluğu')
+    plt.plot(epochs, accuracy, 'b-', label='Training Accuracy')
+    plt.plot(epochs, val_accuracy, 'r-', label='Validation Accuracy')
+    plt.title('Training and Validation Accuracy')
     plt.xlabel('Epochs')
-    plt.ylabel('Doğruluk')
+    plt.ylabel('Accuracy')
     plt.legend()
 
     plt.tight_layout()
@@ -141,4 +141,4 @@ if __name__ == '__main__':
     tflite_model = converter.convert()
     with open('sudoku/model.tflite', 'wb') as f:
         f.write(tflite_model)
-    print("Model başarıyla TensorFlow Lite formatında kaydedildi: model.tflite")
+    print("Model successfully saved in TensorFlow Lite format: model.tflite")

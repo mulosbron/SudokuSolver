@@ -6,12 +6,6 @@ An AI-powered Sudoku solver that uses computer vision and deep learning to detec
 ## Purpose
 To create an automated Sudoku solving system that combines computer vision techniques with machine learning for real-world applications. The project demonstrates digital image processing, CNN-based digit recognition, and backtracking algorithm implementation.
 
-### Key Objectives:
-- Automatically detect and extract Sudoku grids from images
-- Classify digits using a custom-trained CNN model
-- Solve Sudoku puzzles using backtracking algorithm
-- Generate visual output showing the solving process
-
 ## Scope
 
 ### Technology Stack:
@@ -20,14 +14,6 @@ To create an automated Sudoku solving system that combines computer vision techn
 - **Computer Vision**: OpenCV
 - **Scientific Computing**: NumPy
 - **Visualization**: Matplotlib
-
-### Project Features:
-- Image preprocessing with Gaussian blur and Canny edge detection
-- Perspective transformation for grid extraction
-- CNN model for digit classification (0-9)
-- Backtracking algorithm for puzzle solving
-- Step-by-step processing visualization
-- Model conversion to TensorFlow Lite format
 
 ## Implementation
 
@@ -63,7 +49,7 @@ cd sudoku
 python sudoku_test.py
 ```
 
-### Processing Pipeline:
+### Data Pipeline:
 1. **Image Preprocessing**: Convert to grayscale, apply Gaussian blur
 2. **Edge Detection**: Use Canny edge detector
 3. **Grid Detection**: Find contours and extract Sudoku grid

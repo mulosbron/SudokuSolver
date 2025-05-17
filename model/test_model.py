@@ -37,5 +37,5 @@ for i in range(min(num_examples, len(wrong_indices))):
     idx = wrong_indices[i]
     img = X_all[idx]
     plt.imshow(img, cmap='gray')
-    plt.title(f"Gerçek: {actual_classes[idx]}, Tahmin: {predicted_classes[idx]}")
+    plt.title(f"Actual: {actual_classes[idx]}, Prediction: {predicted_classes[idx]}")
     plt.show()
